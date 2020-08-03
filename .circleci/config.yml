@@ -1,11 +1,8 @@
 jobs:
-orbs: 
-    welcome: circleci/welcome-orb@0.4.1
-workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8
+    steps:
       - checkout
       - run: make init
       - run: make help
