@@ -1,0 +1,6 @@
+jobs:
+  build:
+    steps:
+      - checkout
+      - run: make init
+      - run: make help
